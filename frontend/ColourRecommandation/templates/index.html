@@ -19,17 +19,24 @@
         font-family: Arial, sans-serif; /* Change the font-family */
       }
 
-      h1 {
-        font-size: 2rem;
+      h1, h3 {
         color: white;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        font-weight: bolder;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h3 {
+        font-weight: initial;
       }
 
-      form {
+      #form {
         background: rgba(255, 255, 255, 0.9);
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        width: 70%;
       }
 
       label {
@@ -38,7 +45,7 @@
       }
 
       input[type="text"] {
-        width: 100%;
+        width: 90%;
         padding: 10px;
         margin-bottom: 10px;
         border: 1px solid #ccc;
@@ -66,6 +73,10 @@
         justify-content: center;
       }
 
+      .input-text {
+        align-items: center;
+      }
+
       .color-box {
         width: 100px;
         height: 100px;
@@ -89,11 +100,17 @@
     </style>
   </head>
   <body>
-    <h1>Color Recommendation Portal 🌈</h1>
+    <h1>dyPixa</h1>
+    <h3><em>Turning words into lively shades!🌈</em></h3>
+    <div id="form">
     <form>
-      <label for="text">Enter Text:</label>
-      <input type="text" name="text" id="text" required />
+      <div class="input-text">
+        <label for="text">Enter Text:</label>
+        <input type="text" name="text" id="text" required />
+      </div>
+      <center>
       <input type="submit" value="Get Color Recommendations" />
+    </center>
     </form>
     <div id="color-recommendations"></div>
     <script>
@@ -127,5 +144,6 @@
         });
       });
     </script>
+    </div>
   </body>
 </html>
